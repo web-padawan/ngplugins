@@ -31,6 +31,12 @@ global $twig, $template, $mysql, $tpl, $lang, $CurrentHandler;
 		$skipcat = explode(',', $params['skipcat']); 
 	}
 	
+	// generate the list of categories excluding 'skipcat' list
+	if (count($_REQUEST) && count($skipcat)) {
+		foreach ($skipcat as $skip) {
+			array_push($filter, array('SQL', "catid not like ('%".$skip."%')"));
+		}
+	}	
 	// generate the "select" list of the categories 
 	$tVars["catlist"]= makeCategoryList( array ('name' => 'catid', 'selected' => $_REQUEST['catid'], 'skip'=>$skipcat, 'doall' => $do, 'class' => 'mw_search_f'));
 
@@ -39,6 +45,7 @@ global $twig, $template, $mysql, $tpl, $lang, $CurrentHandler;
 		array_push($filter, array('DATA', 'catid', 'LIKE', '%'.secure_html($_REQUEST['catid']).'%'));	 
 	}
 
+	// processing xfields
 	foreach ($xarray['news'] as $id => $data) {
 		switch ($data['type']) {
 			case 'text'  : 	$val = '<select name="xfields_'.$id.'" >';
@@ -78,13 +85,6 @@ global $twig, $template, $mysql, $tpl, $lang, $CurrentHandler;
 			array_push($filter, array('DATA',"xfields_$id", '=', secure_html($_REQUEST["xfields_$id"])));	 
 		}       
 
-	}
-
-	// generate the list of categories excluding 'skipcat' list
-	if (count($_REQUEST) && count($skipcat)) {
-		foreach ($skipcat as $skip) {
-			array_push($filter, array('SQL', "catid not like ('%".$skip."%')"));
-		}
 	}
 
 	// sort news
