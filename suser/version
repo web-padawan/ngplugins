@@ -1,0 +1,17 @@
+;
+; Version description file for plugin @@ Next Generation CMS
+;
+
+ID: suser
+Name: Sorting Users
+Version: 0.4
+Acts: ppages
+File: suser.php
+Config: config.php
+Install: install.php
+Deinstall: uninstall.php
+Type: plugin
+Description: ѕоиск и сортировка пользователей
+Author: Rostunov Sergey, Zemlemer
+Title: ѕоиск и сортировка пользователей
+Information: ѕлагин позвол€ет осуществл€ть поиск по пользовател€м и просматривать их список
