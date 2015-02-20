@@ -8,8 +8,6 @@ Version: 0.4
 Acts: ppages
 File: suser.php
 Config: config.php
-Install: install.php
-Deinstall: uninstall.php
 Type: plugin
 Description: Поиск и сортировка пользователей
 Author: Rostunov Sergey, Zemlemer
