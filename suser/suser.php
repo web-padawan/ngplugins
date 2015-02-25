@@ -68,6 +68,7 @@ function get_entries($row) {
     'status' => $row['status'],
     'last' => $row['last'],
     'reg' => $row['reg'],
+    'email' => $row['mail'],
     'from' => $row['where_from'],
     'news' => $row['news'],
     'com' => isset($row['com'])?$row['com']:'0',
