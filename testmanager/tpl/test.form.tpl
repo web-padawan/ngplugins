@@ -23,12 +23,11 @@
         <td width="50%"><input type="text" name="vcode" style="width:80px" class="input" /></td>
       </tr>
       {% endif %}
-      <table class="table">
-        <tr align="center">
-          <td width="100%" valign="top">
-            <input type="submit" value="{{ lang['testmanager:test.result'] }}" class="btn" />
-          </td>
-        </tr>
+      <tr align="center">
+        <td colspan="2">
+          <input type="submit" value="{{ lang['testmanager:test.result'] }}" class="btn" />
+        </td>
+      </tr>
     </table>
   </form>  
 </div>
