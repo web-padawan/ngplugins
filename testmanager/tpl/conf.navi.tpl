@@ -10,7 +10,7 @@
   &#8594; <a href="?mod=extra-config&plugin=testmanager&action=row&test_id={{ testID }}&row={{ fieldName }}">Вопрос "{{ fieldName }}"</a>
   {% endif %}
   {% if (flags.addField) %}
-  &#8594;Добавление нового вопроса
+  &#8594; Добавление нового вопроса
   {% endif %}
   {% endif %}
 </td>

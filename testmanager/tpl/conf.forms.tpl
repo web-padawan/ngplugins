@@ -12,7 +12,7 @@
 <tr align="left" class="contRow1">
   <td width="30">{{ entry.id }}</td>
   <td style="padding:2px;"><a href="{{ entry.linkEdit}}">{{ entry.name }}</a></td>
-  <td>{{ entry.title }}</td>  
+  <td>{{ entry.title }}</td>
   <td>{{ entry.flags.active ? lang['yesa'] : lang['noa'] }}</td>
   <td nowrap>
     {% if (entry.flags.active) %}
@@ -32,4 +32,3 @@
 </td>
 </tr>
 </table>
-</form>
