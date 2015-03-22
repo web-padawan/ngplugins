@@ -8,9 +8,6 @@ register_plugin_page('testmanager','result','plugin_testmanager_result', 0);
 
 loadPluginLang('testmanager', 'main', '', '', ':');
 
-// Load library
-//include_once(root."/plugins/feedback/lib/common.php");
-
 //
 // Show test
 function plugin_testmanager_screen(){
